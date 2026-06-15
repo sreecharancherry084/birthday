@@ -6,39 +6,39 @@
 
 // All photos from the Photos/ folder (now in public/photos/)
 export const photos = [
-  { id: 1, src: './photos/photo3.jpeg', caption: 'Beautiful', memory: 'Aesthetic' },
-  { id: 2, src: './photos/photo4.jpeg', caption: 'Classic', memory: 'Nice click' },
-  { id: 3, src: './photos/photo5.jpeg', caption: 'Aesthetic', memory: 'Aesthetic' },
-  { id: 4, src: './photos/photo6.jpeg', caption: 'Lovely outfit', memory: 'Lovely outfit' },
-  { id: 5, src: './photos/photo7.jpeg', caption: 'Lovely outfit', memory: 'Looking sharp' },
-  { id: 6, src: './photos/photo8.jpeg', caption: 'Aesthetic', memory: 'Great lighting' },
-  { id: 7, src: './photos/photo9.jpeg', caption: 'Pretty', memory: 'Nice portrait' },
-  { id: 8, src: './photos/photo10.jpeg', caption: 'Beautiful shot', memory: 'Great picture' },
-  { id: 9, src: './photos/photo11.jpeg', caption: 'Chilling', memory: 'Relaxed' },
-  { id: 10, src: './photos/photo12.jpeg', caption: 'Vibes', memory: 'Nice background' },
-  { id: 11, src: './photos/photo14.jpeg', caption: 'Smile', memory: 'Lovely' },
-  { id: 12, src: './photos/photo16.jpeg', caption: 'Amazing', memory: 'Wow' },
-  { id: 13, src: './photos/photo18.jpeg', caption: 'Nice click', memory: 'Great photo' },
-  { id: 14, src: './photos/photo19.jpeg', caption: 'Candid', memory: 'Caught off guard' },
-  { id: 15, src: './photos/photo20.jpeg', caption: 'Aesthetic vibes', memory: 'Cool' },
-  { id: 16, src: './photos/photo21.jpeg', caption: 'Candid moment', memory: 'Nice' },
-  { id: 17, src: './photos/photo22.jpeg', caption: 'Beautiful day', memory: 'Sunlight' },
-  { id: 18, src: './photos/photo23.jpeg', caption: 'Casual', memory: 'Everyday' },
-  { id: 19, src: './photos/photo24.jpeg', caption: 'Lovely', memory: 'Classic' },
-  { id: 20, src: './photos/photo25.jpeg', caption: 'Beautiful', memory: 'Vibe' },
-  { id: 21, src: './photos/photo26.jpeg', caption: 'Great click', memory: 'Memorable' }
+  { id: 1, src: '/birthday/photos/photo3.jpeg', caption: 'Beautiful', memory: 'Aesthetic' },
+  { id: 2, src: '/birthday/photos/photo4.jpeg', caption: 'Classic', memory: 'Nice click' },
+  { id: 3, src: '/birthday/photos/photo5.jpeg', caption: 'Aesthetic', memory: 'Aesthetic' },
+  { id: 4, src: '/birthday/photos/photo6.jpeg', caption: 'Lovely outfit', memory: 'Lovely outfit' },
+  { id: 5, src: '/birthday/photos/photo7.jpeg', caption: 'Lovely outfit', memory: 'Looking sharp' },
+  { id: 6, src: '/birthday/photos/photo8.jpeg', caption: 'Aesthetic', memory: 'Great lighting' },
+  { id: 7, src: '/birthday/photos/photo9.jpeg', caption: 'Pretty', memory: 'Nice portrait' },
+  { id: 8, src: '/birthday/photos/photo10.jpeg', caption: 'Beautiful shot', memory: 'Great picture' },
+  { id: 9, src: '/birthday/photos/photo11.jpeg', caption: 'Chilling', memory: 'Relaxed' },
+  { id: 10, src: '/birthday/photos/photo12.jpeg', caption: 'Vibes', memory: 'Nice background' },
+  { id: 11, src: '/birthday/photos/photo14.jpeg', caption: 'Smile', memory: 'Lovely' },
+  { id: 12, src: '/birthday/photos/photo16.jpeg', caption: 'Amazing', memory: 'Wow' },
+  { id: 13, src: '/birthday/photos/photo18.jpeg', caption: 'Nice click', memory: 'Great photo' },
+  { id: 14, src: '/birthday/photos/photo19.jpeg', caption: 'Candid', memory: 'Caught off guard' },
+  { id: 15, src: '/birthday/photos/photo20.jpeg', caption: 'Aesthetic vibes', memory: 'Cool' },
+  { id: 16, src: '/birthday/photos/photo21.jpeg', caption: 'Candid moment', memory: 'Nice' },
+  { id: 17, src: '/birthday/photos/photo22.jpeg', caption: 'Beautiful day', memory: 'Sunlight' },
+  { id: 18, src: '/birthday/photos/photo23.jpeg', caption: 'Casual', memory: 'Everyday' },
+  { id: 19, src: '/birthday/photos/photo24.jpeg', caption: 'Lovely', memory: 'Classic' },
+  { id: 20, src: '/birthday/photos/photo25.jpeg', caption: 'Beautiful', memory: 'Vibe' },
+  { id: 21, src: '/birthday/photos/photo26.jpeg', caption: 'Great click', memory: 'Memorable' }
 ];
 
 // Videos from the shorts/ folder (now in public/videos/)
 export const videos = [
-  { id: 1, src: './videos/video1.mp4', title: 'Memory Reel #1', caption: 'A moment frozen in time' },
-  { id: 2, src: './videos/video2.mp4', title: 'Memory Reel #2', caption: 'The adventure continues' },
+  { id: 1, src: '/birthday/videos/video1.mp4', title: 'Memory Reel #1', caption: 'A moment frozen in time' },
+  { id: 2, src: '/birthday/videos/video2.mp4', title: 'Memory Reel #2', caption: 'The adventure continues' },
 ];
 
 // Timeline memories - pairs photos with story moments
 export const timelineMemories = [
-  { photo: { src: './photos/born baby.jpeg' }, title: 'The Beginning', caption: 'Baby picture', year: 'Early Days' },
-  { photo: { src: './photos/childhood together.jpeg' }, title: 'Childhood Era', caption: 'Childhood snapshot', year: 'Childhood' },
+  { photo: { src: '/birthday/photos/born baby.jpeg' }, title: 'The Beginning', caption: 'Baby picture', year: 'Early Days' },
+  { photo: { src: '/birthday/photos/childhood together.jpeg' }, title: 'Childhood Era', caption: 'Childhood snapshot', year: 'Childhood' },
   { photo: photos[0], title: 'Golden Hour', caption: 'A lovely portrait', year: 'Sunkissed' },
   { photo: photos[2], title: 'Traditional Vibes', caption: 'Casual click', year: 'Beautiful' },
   { photo: photos[5], title: 'Saree Look', caption: 'Aesthetic photo', year: 'Elegant' },

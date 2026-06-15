@@ -72,7 +72,7 @@ const BirthdayReveal = () => {
           animate={visible ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.5, duration: 0.8 }}>
           <div className="reveal-photo-glow" />
-          <img src="./photos/photo10.jpeg" alt="Best moment" className="reveal-photo"
+          <img src="/birthday/photos/photo10.jpeg" alt="Best moment" className="reveal-photo"
             loading="lazy" onError={(e) => { e.target.style.display = 'none'; }} />
         </motion.div>
 

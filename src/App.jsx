@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="app">
       <audio ref={audioRef} loop>
-        <source src="./tune/moodmode-happy-birthday-song-455067 (1).mp3" type="audio/mpeg" />
+        <source src="/birthday/tune/moodmode-happy-birthday-song-455067 (1).mp3" type="audio/mpeg" />
       </audio>
       <ParticlesBackground />
       <Suspense fallback={<div className="section-loader">✨</div>}>
