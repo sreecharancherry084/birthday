@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import './TinyCollection.css';
 
 const togetherPhotos = [
-  { id: 1, src: '/photos/together1.jpeg', caption: 'Proof that we actually meet sometimes.' },
-  { id: 2, src: '/photos/together2.jpeg', caption: 'One of the rare moments both of us looked at the camera.' },
-  { id: 3, src: '/photos/together3.jpeg', caption: 'National treasure. Protected by friendship laws.' },
-  { id: 4, src: '/photos/together4.jpeg', caption: 'Limited edition. Only 4 exist in the world.' },
+  { id: 1, src: './photos/together1.jpeg', caption: 'Proof that we actually meet sometimes.' },
+  { id: 2, src: './photos/together2.jpeg', caption: 'One of the rare moments both of us looked at the camera.' },
+  { id: 3, src: './photos/together3.jpeg', caption: 'National treasure. Protected by friendship laws.' },
+  { id: 4, src: './photos/together4.jpeg', caption: 'Limited edition. Only 4 exist in the world.' },
 ];
 
 const Counter = ({ end, duration = 2000 }) => {
