@@ -1,0 +1,133 @@
+.minigames-section {
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 3rem;
+}
+
+.game-card {
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+  border-top: 4px solid #a855f7;
+}
+
+.game-card-large {
+  grid-column: 1 / -1;
+  min-height: 400px;
+}
+
+.game-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.game-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.relative-actions {
+  position: relative;
+  height: 100px;
+  align-items: center;
+}
+
+.game-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.game-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.yes-btn {
+  position: absolute;
+  left: 30%;
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.no-btn {
+  position: absolute;
+  right: 30%;
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.game-success {
+  color: #10b981;
+}
+
+.success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.game-error {
+  color: #ef4444;
+}
+
+.error-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.recalc-text {
+  font-family: 'Courier New', Courier, monospace;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.slider-container {
+  margin-bottom: 1.5rem;
+}
+
+.miss-slider {
+  width: 100%;
+  accent-color: #ec4899;
+}
+
+.slider-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ec4899;
+  margin-top: 1rem;
+}
+
+.slider-msg {
+  font-weight: bold;
+}
+
+.error-msg { color: #ef4444; }
+.success-msg { color: #10b981; }
+
+

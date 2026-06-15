@@ -1,0 +1,13 @@
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.section-loader {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  animation: sparkle 1.5s ease-in-out infinite;
+}

@@ -1,0 +1,229 @@
+/* ========================================
+   BIRTHDAY SURPRISE - GLOBAL STYLES
+   Premium Night Sky Aesthetic
+   ======================================== */
+
+:root {
+  /* Color Palette */
+  --purple-deep: #1a0533;
+  --purple-mid: #2d1b69;
+  --purple-light: #a855f7;
+  --pink-hot: #ec4899;
+  --pink-soft: #f472b6;
+  --blue-electric: #3b82f6;
+  --blue-sky: #60a5fa;
+  --gold: #fbbf24;
+  --gold-light: #fde68a;
+  --white: #ffffff;
+  --white-soft: rgba(255,255,255,0.9);
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --glass-hover: rgba(255,255,255,0.1);
+
+  /* Gradients */
+  --gradient-main: linear-gradient(135deg, #1a0533 0%, #0f172a 50%, #1e1b4b 100%);
+  --gradient-card: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(59,130,246,0.1));
+  --gradient-accent: linear-gradient(135deg, #a855f7, #ec4899, #3b82f6);
+  --gradient-gold: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  --gradient-text: linear-gradient(135deg, #c084fc, #f472b6, #60a5fa);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-handwritten: 'Dancing Script', cursive;
+  --font-casual: 'Caveat', cursive;
+
+  /* Spacing */
+  --section-padding: clamp(60px, 10vh, 120px) clamp(16px, 5vw, 80px);
+
+  /* Effects */
+  --shadow-glow: 0 0 30px rgba(168,85,247,0.3);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.3);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple-light) var(--purple-deep);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--gradient-main);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--purple-deep); }
+::-webkit-scrollbar-thumb { background: var(--purple-light); border-radius: 3px; }
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; font-family: var(--font-body); }
+
+/* Glass Card */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Base */
+.section {
+  padding: var(--section-padding);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+/* Glow Button */
+.glow-btn {
+  padding: 16px 40px;
+  border-radius: 50px;
+  background: var(--gradient-accent);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(168,85,247,0.4);
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 40px rgba(168,85,247,0.6);
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  animation: btnShine 3s ease-in-out infinite;
+}
+
+@keyframes btnShine {
+  0%, 100% { transform: translate(-30%, -30%); }
+  50% { transform: translate(30%, 30%); }
+}
+
+/* Floating Particles Background */
+.particles-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: floatParticle linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+}
+
+/* Sparkle */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* Stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Shooting Star */
+@keyframes shoot {
+  0% { transform: translateX(0) translateY(0); opacity: 1; }
+  100% { transform: translateX(300px) translateY(300px); opacity: 0; }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(168,85,247,0.3); }
+  50% { box-shadow: 0 0 40px rgba(168,85,247,0.6), 0 0 60px rgba(236,72,153,0.3); }
+}
+
+/* Photo placeholder fallback */
+.photo-fallback {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: inherit;
+}
+
+/* Responsive helpers */
+@media (max-width: 768px) {
+  .section { padding: 40px 16px; }
+  .section-title { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+}

@@ -1,0 +1,102 @@
+.timeline-section { min-height: auto; padding: var(--section-padding); }
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--purple-light), var(--pink-hot), var(--blue-electric), transparent);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(168,85,247,0.3);
+}
+
+.timeline-card {
+  position: relative;
+  width: 45%;
+  margin-bottom: 3rem;
+}
+
+.timeline-card.left { margin-right: auto; text-align: right; }
+.timeline-card.right { margin-left: auto; text-align: left; }
+
+.timeline-dot {
+  position: absolute;
+  top: 30px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  box-shadow: 0 0 15px var(--purple-light);
+  z-index: 2;
+}
+
+.timeline-card.left .timeline-dot { right: -8px; transform: translateX(calc(100% + 50% + 4px)); }
+.timeline-card.right .timeline-dot { left: -8px; transform: translateX(calc(-100% - 50% - 4px)); }
+
+.timeline-dot-inner {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: white;
+  margin: 4px auto;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.timeline-content {
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-handwritten);
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.timeline-img-wrapper {
+  width: 100%; height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.timeline-img-wrapper img {
+  width: 100%; height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.timeline-content:hover .timeline-img-wrapper img { transform: scale(1.05); }
+
+.timeline-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--white);
+}
+
+.timeline-card-caption {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .timeline-line { left: 20px; }
+  .timeline-card { width: calc(100% - 50px); margin-left: 50px !important; text-align: left !important; margin-bottom: 2rem; }
+  .timeline-card.left .timeline-dot,
+  .timeline-card.right .timeline-dot { left: -42px; right: auto; transform: none; }
+}

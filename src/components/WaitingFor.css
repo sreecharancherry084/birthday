@@ -1,0 +1,83 @@
+.waiting-for-section {
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.waiting-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin-top: 3rem;
+}
+
+.waiting-card {
+  width: 280px;
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.waiting-icon-glow {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: #a855f7;
+  filter: blur(30px);
+  opacity: 0.5;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+.waiting-card:hover .waiting-icon-glow {
+  opacity: 0.8;
+  background: #ec4899;
+}
+
+.waiting-icon {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.waiting-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Floating animation for odd/even cards to make it dynamic */
+.waiting-card:nth-child(odd) {
+  animation: float-odd 4s ease-in-out infinite;
+}
+
+.waiting-card:nth-child(even) {
+  animation: float-even 5s ease-in-out infinite;
+}
+
+@keyframes float-odd {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-even {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
